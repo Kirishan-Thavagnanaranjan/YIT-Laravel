@@ -1,17 +1,21 @@
 @extends ('layouts.master')
 @section('title', 'About')
-
 @section('content')
+
+
+
+
     <div class="section">
 
-        <div class="p-5 w-50 card d-flex  " style="width: 60%">
+        <div class="p-5 w-50 card d-flex " style="width: 60%">
 
-            <form action="{{ url('save') }}" method="post" autocomplete="on" enctype="multipart/form-data" >
+            <form action="{{ url('save') }}" method="post" autocomplete="on" enctype="multipart/form-data" class="b-">
                 @csrf
                 <div class="form-header container text-center h1">Student Registration</div>
                 <div class="line-break row">
                     <label for="myfile" class="col-form-label col">Select student picture</label>
                     <input type="file" name="myfile" id="myfile" accept="image/jpg" class="col">
+                    {{ $mydata['myfile'] }}
                 </div>
                 <div class="line-break row">
                     <label for="father_name" class="col-form-label col">Father Name</label>

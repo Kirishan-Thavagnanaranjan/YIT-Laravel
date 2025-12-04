@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MyController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -33,11 +35,22 @@ use Illuminate\Http\Request;
 
 
 
-Route::post('save', function (Request $request) {
-    $data = $request->all();
-    return view('pages.contact')->with('mydata',$data);
+// Route::post('save', function (Request $request) {
+//     $data = $request->all();
+//     return view('pages.contact')->with('mydata',$data);
 
-});
-Route::get('/{name?}', function ($name = 'home') {
-    return view('pages/' . $name);
-});
+// });
+// Route::get('/{name?}', function ($name = 'home') {
+//     return view('pages/' . $name);
+// });
+
+
+
+Route::get('/home',[PageController::class,'home']);
+Route::get('/about',[PageController::class,'about']);
+Route::get('/contact',[PageController::class,'contact']);
+Route::get('/gallery',[PageController::class,'gallery']);
+Route::get('/service',[PageController::class,'service']);
+Route::get('/',[PageController::class,'home']);
+
+Route::resource('my',MyController::class);

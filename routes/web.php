@@ -49,7 +49,7 @@ use Illuminate\Http\Request;
 
 Route::get('/home',[PageController::class,'home']);
 Route::get('/about',[PageController::class,'about']);
-Route::get('/contact',[PageController::class,'contact']);
+Route::get( '/contact',[PageController::class,'contact']);
 Route::get('/gallery',[PageController::class,'gallery']);
 Route::get('/service',[PageController::class,'service']);
 Route::get('/',[PageController::class,'home']);

@@ -6,7 +6,7 @@
 
         <div class="p-5 w-50 card d-flex  " style="width: 60%">
 
-            <form action="{{ url('save') }}" method="post" autocomplete="on" enctype="multipart/form-data" >
+            <form action="{{ url('/contact') }}" method="post" autocomplete="on" enctype="multipart/form-data" >
                 @csrf
                 <div class="form-header container text-center h1">Student Registration</div>
                 <div class="line-break row">

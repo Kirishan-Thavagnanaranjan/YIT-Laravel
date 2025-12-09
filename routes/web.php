@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -54,3 +55,4 @@ Route::get('/service',[PageController::class,'service']);
 Route::get('/',[PageController::class,'home']);
 
 Route::resource('my',MyController::class);
+Route::resource('students',StudentController::class);
